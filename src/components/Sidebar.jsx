@@ -4,7 +4,8 @@ import ButtonGroup from "./ButtonGroup";
 export default function Sidebar({ 
   handleAddItem,
   handleRemoveAllItems,
-  handleResetToInitial
+  handleResetToInitial,
+  handleMarkAllAsComplete
 }) {
   return (
     <div className="sidebar">
@@ -12,6 +13,7 @@ export default function Sidebar({
       <ButtonGroup
         onRemoveAllItems={handleRemoveAllItems}
         onResetToInitial={handleResetToInitial}
+        onMarkAllAsComplete={handleMarkAllAsComplete}
       />
     </div>
   )
