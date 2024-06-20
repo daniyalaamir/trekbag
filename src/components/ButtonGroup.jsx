@@ -3,7 +3,8 @@ import Button from "./Button";
 export default function ButtonGroup({ 
   onRemoveAllItems,
   onResetToInitial,
-  onMarkAllAsComplete
+  onMarkAllAsComplete,
+  onMarkAllAsIncomplete
 }) {
   return (
     <section className="button-group">
@@ -15,6 +16,7 @@ export default function ButtonGroup({
       </Button>
       <Button 
         btnType="secondary"
+        onClick={onMarkAllAsIncomplete}
       >
         Mark all as incomplete
       </Button>
