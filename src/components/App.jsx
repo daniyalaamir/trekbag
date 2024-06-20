@@ -23,6 +23,10 @@ function App() {
     setItems([])
   }
 
+  const handleResetToInitial = () => {
+    setItems(INITIAL_ITEMS)
+  }
+
   return (
     <>
       <BackgroundHeading />
@@ -32,6 +36,7 @@ function App() {
         <Sidebar 
           handleAddItem={handleAddItem} 
           handleRemoveAllItems={handleRemoveAllItems} 
+          handleResetToInitial={handleResetToInitial}
         />
       </main>
       <Footer />

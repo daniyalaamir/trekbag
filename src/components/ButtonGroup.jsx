@@ -1,7 +1,8 @@
 import Button from "./Button";
 
 export default function ButtonGroup({ 
-  onRemoveAllItems 
+  onRemoveAllItems,
+  onResetToInitial
 }) {
   return (
     <section className="button-group">
@@ -17,6 +18,7 @@ export default function ButtonGroup({
       </Button>
       <Button 
         btnType="secondary"
+        onClick={onResetToInitial}
       >
         Reset to initial
       </Button>
