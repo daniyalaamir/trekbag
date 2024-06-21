@@ -60,8 +60,15 @@ function App() {
     <>
       <BackgroundHeading />
       <main>
-        <Header />
-        <ItemList items={items} handleDeleteItem={handleDeleteItem} handleToggleItem={handleToggleItem} />
+        <Header 
+          numberOfItemsPacked={items.filter((item) => item.packed).length}
+          totalItems={items.length} 
+        />
+        <ItemList 
+          items={items} 
+          handleDeleteItem={handleDeleteItem} 
+          handleToggleItem={handleToggleItem} 
+        />
         <Sidebar 
           handleAddItem={handleAddItem} 
           handleRemoveAllItems={handleRemoveAllItems} 
