@@ -19,6 +19,11 @@ function App() {
     setItems(newItems)
   }
 
+  const handleDeleteItem = id => {
+    const newItems = items.filter(item => item.id !== id)
+    setItems(newItems)
+  }
+
   const handleRemoveAllItems = () => {
     setItems([])
   }
@@ -46,7 +51,7 @@ function App() {
       <BackgroundHeading />
       <main>
         <Header />
-        <ItemList items={items} />
+        <ItemList items={items} handleDeleteItem={handleDeleteItem} />
         <Sidebar 
           handleAddItem={handleAddItem} 
           handleRemoveAllItems={handleRemoveAllItems} 
