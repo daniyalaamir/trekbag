@@ -1,6 +1,5 @@
-import { useContext } from "react";
+import { useItemsContext } from "../lib/hooks";
 import Button from "./Button";
-import { ItemsConext } from "../contexts/ItemsContextProvider";
 
 export default function ButtonGroup() {
   const {
@@ -8,7 +7,7 @@ export default function ButtonGroup() {
     handleMarkAllAsIncomplete,
     handleResetToInitial,
     handleRemoveAllItems
-  } = useContext(ItemsConext)
+  } = useItemsContext()
   return (
     <section className="button-group">
       <Button 
