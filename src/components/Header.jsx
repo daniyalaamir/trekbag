@@ -1,13 +1,16 @@
+import { useContext } from "react";
+import { ItemsConext } from './../contexts/ItemsContextProvider';
 import Logo from "./Logo";
 import Counter from "./Counter";
 
-export default function Header({ numberOfItemsPacked, totalItems }) {
+export default function Header() {
+  const { items } = useContext(ItemsConext)
   return (
     <header>
       <Logo />
       <Counter 
-        numberOfItemsPacked={numberOfItemsPacked} 
-        totalItems={totalItems} 
+        numberOfItemsPacked={items.filter(item => item.packed).length} 
+        totalItems={items.length} 
       />
     </header>
   )
